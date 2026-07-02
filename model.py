@@ -72,8 +72,10 @@ def init_mlp_params(key, layer_sizes, scale=0.1):
         dicts.append(init_linear_layer(split_keys[i], layer_sizes[i], layer_sizes[i+1], scale=scale))
     return dicts
 
-# Step 9 - linear_forward (not yet solved)
-# TODO: implement
+# Step 9 - linear_forward
+def linear_forward(x, layer_params):
+    # TODO: compute x @ W + b using layer_params['W'] and layer_params['b'].
+    return x @ layer_params['W'] + layer_params['b']
 
 # Step 10 - relu_activation (not yet solved)
 # TODO: implement
